@@ -4,10 +4,11 @@ export default [
         name: 'cleintLogo',
         widget: 'objects',
         fields: [
-            { label: 'Clients', name: 'clients', widget: 'list',
-                fields: [
-                    { label: 'image', name: 'image', widget: 'image' },
-                ]
+            { label: 'Clients', name: 'clients', widget: 'relation',
+                collection: 'client',
+                valueField: 'clientLogo',
+                searchFields: ['altText'],
+                multiple: true
             }
         ]
     }

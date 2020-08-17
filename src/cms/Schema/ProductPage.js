@@ -1,12 +1,13 @@
 import seo from './seo'
 import languages from './language'
 import brandColor from './brandColor'
-import TopBanner from './TopBanner'
-import TextBlock from './TextBlock'
+import HeroBanner from './HeroBanner'
 import Testimony from './Testimony'
 import CardBlock from './CardBlock'
 import ClientLogo from './ClientLogo'
 import OurCustomers from './OurCustomers'
+import ImageSection from './ImageSection'
+import customer from './ComponentsSchema/customer'
 
 
 export default [
@@ -14,23 +15,24 @@ export default [
         label: 'Product Page',
         name: 'productPage',
         folder: 'src/pages/products',
-        slug: '{{name}}',
+        slug: '{{title}}',
         create: true,
         filter: {field: "language", value: "EN"},
         fields: [
             { ...languages },
             { ...brandColor },
-            { ...seo },
+            // { ...seo },
             { label: 'Title', name: 'title', widget: 'string', required: false },
             {
-                label: 'Body', name: 'body', widget: 'list',
+                label: 'Body', name: 'body', widget: 'list', required: false,
                 types: [
-                    ...TopBanner,
-                    ...TextBlock,
+                    // ...HeroBanner,
+                    // ...ImageSection,
                     ...Testimony,
-                    ...CardBlock,
-                    ...ClientLogo,
-                    ...OurCustomers
+                    // ...CardBlock,
+                    // ...ClientLogo,
+                    // ...OurCustomers
+                    
                 ]
             }
         ]

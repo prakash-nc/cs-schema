@@ -4,11 +4,11 @@ export default [
         name: 'ourCustomers',
         widget: 'objects',
         fields: [
-            { label: 'Customers', name: 'customers', widget: 'list',
-                fields: [
-                    { label: 'title', name: 'title', widget: 'string' },
-                    { label: 'Value', name: 'value', widget: 'string' },
-                ]
+            { label: 'Customers', name: 'customers', widget: 'relation',
+                collection: 'Customer',
+                valueField: 'customer',
+                searchFields: ['title'],
+                multiple: true
             }
         ]
     }

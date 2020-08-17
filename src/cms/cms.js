@@ -7,6 +7,9 @@ import productPage from './Schema/productPage'
 import Components from './Schema/Components'
 
 import uploadcare from 'netlify-cms-media-library-uploadcare'
+import testimony from './Schema/ComponentsSchema/testimony'
+import client from './Schema/ComponentsSchema/client'
+import customer from './Schema/ComponentsSchema/customer'
 
 CMS.init({
   config: {
@@ -15,7 +18,7 @@ CMS.init({
     },
     media_folder: '../../static/images/uploads',
     public_folder: '../../images/uploads',
-    collections: [...productPage, ...Components]
+    collections: [...productPage, ...Components, ...testimony, ...client, ...customer]
   }
 })
 
