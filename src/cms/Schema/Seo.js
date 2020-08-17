@@ -5,6 +5,6 @@ export default {
     collapsed: true,
     fields: [
         { label: 'Page Discription', name : 'discription', widget: 'text', required: false },
-        { label: 'Keywords', name : 'keywords', widget: 'string', required: false, seperator: ','},
+        { label: 'Keywords', name : 'keywords', widget: 'string', required: false, seperator: ',', required: false},
     ]
  }

@@ -21,20 +21,20 @@ export default [
         fields: [
             { ...languages },
             { ...brandColor },
-            // { ...seo },
+            { ...seo },
             { label: 'Title', name: 'title', widget: 'string', required: false },
-            {
-                label: 'Body', name: 'body', widget: 'list', required: false,
+            { label: 'Sections', name: 'sections', widget: 'list', 
                 types: [
-                    // ...HeroBanner,
-                    // ...ImageSection,
+                    ...HeroBanner,
+                    ...ImageSection,
                     ...Testimony,
-                    // ...CardBlock,
-                    // ...ClientLogo,
-                    // ...OurCustomers
+                    ...CardBlock,
+                    ...ClientLogo,
+                    ...OurCustomers
                     
                 ]
             }
+            { label: 'Body', name: 'body', widget: 'markdown', required: false, collapsed: true},
         ]
     }
 ]
